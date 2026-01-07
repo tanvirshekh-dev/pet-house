@@ -1,0 +1,44 @@
+[
+  {
+    "serviceId": 1,
+    "title": "Healthy Food for Dogs",
+    "petType": "Dog",
+    "description": "Provide balanced meals with protein, vitamins, and fresh water to keep healthy every day.",
+    "image": "https://i.ibb.co.com/ccNmMC1y/tips-01.jpg",
+    "rating": 4.8,
+    "tips": [
+      "Avoid chocolate and junk food",
+      "Feed at fixed times daily",
+      "Always provide clean water"
+    ],
+    "date" : "25-04-2025"
+  },
+  {
+    "serviceId": 2,
+    "title": "Daily Care Tips for Cats",
+    "petType": "Cat",
+    "description": "Cats need regular grooming, clean litter boxes, and a calm environment for a stress-free life.",
+    "image": "https://i.ibb.co.com/jvQ5mGh5/tips-02.jpg",
+    "rating": 4.7,
+    "tips": [
+      "Clean litter box regularly",
+      "Brush fur weekly",
+      "Provide scratching posts"
+    ],
+    "date" : "28-04-2025"
+  },
+  {
+    "serviceId": 3,
+    "title": "Pet Health & Vaccination",
+    "petType": "Dog & Cat",
+    "description": "Regular vet checkups and timely vaccinations protect pets from serious diseases.",
+    "image": "https://i.ibb.co.com/VW9tB2Q0/tips-03.jpg",
+    "rating": 4.9,
+    "tips": [
+      "Follow vaccination schedule",
+      "Visit vet every 6 months",
+      "Monitor pet behavior closely"
+    ],
+    "date" : "30-04-2025"
+  }
+]

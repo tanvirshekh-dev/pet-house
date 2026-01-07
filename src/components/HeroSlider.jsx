@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import heroSlider from "../../public/heroslider.json";
+import { CircleArrowRight } from "lucide-react";
 
 const HeroSlider = () => {
   return (
@@ -34,8 +35,8 @@ const HeroSlider = () => {
                     {slide.serviceName}
                   </h1>
                   <p className="text-lg md:text-xl pb-8">{slide.description}</p>
-                  <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-md">
-                    view more
+                  <button className="btn btn-primary">
+                    View More <CircleArrowRight size={20} strokeWidth={3} />
                   </button>
                 </div>
               </div>

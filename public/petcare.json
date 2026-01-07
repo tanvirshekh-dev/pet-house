@@ -19,7 +19,7 @@
     "price": 60,
     "rating": 4.8,
     "slotsAvailable": 3,
-    "description": "Therapeutic massage focusing on muscle recovery and stress relief for active or senior dogs.",
+    "description": "Therapeutic massage focusing on muscle recovery and stress relief active senior dogs.",
     "image": "https://i.ibb.co.com/4zXsWrF/pet-02-2.jpg",
     "category": "Health"
   },
@@ -31,8 +31,8 @@
     "price": 45,
     "rating": 5.0,
     "slotsAvailable": 8,
-    "description": "A guided group session for puppies to learn basic manners and interact safely with other dogs.",
-    "image": "https://i.ibb.co.com/bRCgjVNy/pet-01-1.jpg",
+    "description": "A guided group session for puppies to learn basic manners interact safely with other dogs.",
+    "image": "https://i.ibb.co.com/XxWfqpvc/service-03.jpg",
     "category": "Training"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.7,
     "slotsAvailable": 2,
     "description": "Includes organic shampoo bath, haircut, nail trimming, and ear cleaning for all breeds.",
-    "image": "https://i.ibb.co.com/zTtL1csW/pet-03-3.jpg",
+    "image": "https://i.ibb.co.com/FbZYjhJd/service-04.jpg",
     "category": "Grooming"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.6,
     "slotsAvailable": 10,
     "description": "Professional sizing and consultation to find the perfect memory foam bed for your pet's joints.",
-    "image": "https://i.ibb.co.com/LDT18zrz/pet-04-4.jpg",
+    "image": "https://i.ibb.co.com/ZRbt5spW/service-05.jpg",
     "category": "Furniture"
   },
   {
@@ -68,7 +68,7 @@
     "rating": 4.9,
     "slotsAvailable": 5,
     "description": "A comprehensive oral health exam including plaque assessment and breath freshening tips.",
-    "image": "https://i.ibb.co.com/HZ5CnSD/pet-06-6.jpg",
+    "image": "https://i.ibb.co.com/1G8m2wP2/service-v1-3.jpg",
     "category": "Health"
   }
 ]

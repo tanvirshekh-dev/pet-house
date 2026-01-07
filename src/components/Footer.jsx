@@ -5,39 +5,54 @@ import { IoLinkSharp } from "react-icons/io5";
 const Footer = () => {
   return (
     <section>
-          <footer className="footer sm:footer-horizontal bg-base-200 p-10">
-              
+      <footer className="footer sm:footer-horizontal bg-[#22254a] p-10">
         <aside className="space-y-4">
-          <img src="../../assets/Favicon.png" alt="" />
+          <img src="/logo-01.png" className="rounded-xl w-20" alt="" />
           <p>
-            ACME Industries Ltd.
+            Pet House Industries Ltd.
             <br />
-            Providing reliable tech since 1992
+            Providing reliable tech since 2007
           </p>
           <div className="flex space-x-6">
-            <img className="w-12 cursor-pointer" src="../../assets/facebook.png" alt="" />
-            <img className="w-12 cursor-pointer" src="../../assets/instagram.png" alt="" />
-            <img className="w-12 cursor-pointer" src="../../assets/youtube.png" alt="" />
-            <img className="w-12 cursor-pointer" src="../../assets/twitter.png" alt="" />
+            <img
+              className="w-12 cursor-pointer"
+              src="../../assets/facebook.png"
+              alt=""
+            />
+            <img
+              className="w-12 cursor-pointer"
+              src="../../assets/instagram.png"
+              alt=""
+            />
+            <img
+              className="w-12 cursor-pointer"
+              src="../../assets/youtube.png"
+              alt=""
+            />
+            <img
+              className="w-12 cursor-pointer"
+              src="../../assets/twitter.png"
+              alt=""
+            />
           </div>
-              </aside>
-              
+        </aside>
+
         <nav>
           <h6 className="footer-title">Quick Links</h6>
           <a className="link link-hover">Home</a>
           <a className="link link-hover">About Us</a>
           <a className="link link-hover">Services</a>
           <a className="link link-hover">Contact Us</a>
-              </nav>
-              
+        </nav>
+
         <nav>
           <h6 className="footer-title">Help Center</h6>
           <a className="link link-hover">Terms & Condition</a>
           <a className="link link-hover">Privacy Policy</a>
           <a className="link link-hover">Support</a>
           <a className="link link-hover">FAQ</a>
-              </nav>
-              
+        </nav>
+
         <nav>
           <h6 className="footer-title">contact us</h6>
           <div className="flex items-center gap-2">
@@ -50,9 +65,12 @@ const Footer = () => {
             <IoLinkSharp /> <a className="link link-hover"> WWW.pethouse.com</a>
           </div>
         </nav>
-          </footer>
-      <div className="sm:footer-horizontal bg-base-200 p-10 border-t">
-        <p className="text-center">all right reserved by  @pethouse Ltd. Copyright &copy; 2026 | Powered by pethouse </p>
+      </footer>
+      <div className="sm:footer-horizontal bg-[#171a39] p-6">
+        <p className="text-center">
+          all right reserved by @pethouse Ltd. Copyright &copy; 2026 | Powered
+          by pethouse{" "}
+        </p>
       </div>
     </section>
   );
