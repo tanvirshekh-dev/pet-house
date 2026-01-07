@@ -6,7 +6,11 @@ const Services = () => {
   return (
     <div>
       <h2 className="text-center text-3xl mt-20 font-semibold">
-        Popular <span className="text-pink-500 underline underline-offset-4 ">Winter</span> Care Services
+        Popular{" "}
+        <span className="text-pink-500 underline underline-offset-4 ">
+          Winter
+        </span>{" "}
+        Care Services
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 w-11/12 mx-auto gap-6 my-10">
@@ -15,7 +19,7 @@ const Services = () => {
           return (
             <div
               key={item.serviceId}
-              className="card shadow-sm hover:scale-105 hover:shadow-md duration-300 ease-in-out transition-transform px-4 pt-4 pb-6"
+              className="card shadow-sm hover:scale-105 hover:shadow-lg duration-300 ease-in-out transition-transform px-4 pt-4 pb-6"
             >
               <figure className="rounded-lg overflow-hidden">
                 <img src={item.image} alt="" className="w-full" />

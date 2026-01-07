@@ -24,9 +24,9 @@ const OurExpertVets = () => {
             <h3 className="card-title text-gray-400">Founder</h3>
             <h2 className="text-2xl font-bold text-[#393d72]">Rosalina D. William</h2>
             <div className="card-actions">
-              <img className="w-12 cursor-pointer" src="../../assets/facebook.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/twitter.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/instagram.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/facebook.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/twitter.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/instagram.png" alt="" />
             </div>
           </div>
               </div>
@@ -44,9 +44,9 @@ const OurExpertVets = () => {
             <h3 className="card-title text-gray-400">CEO</h3>
             <h2 className="text-2xl font-bold text-[#393d72]">Whatson William</h2>
             <div className="card-actions">
-              <img className="w-12 cursor-pointer" src="../../assets/facebook.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/twitter.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/instagram.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/facebook.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/twitter.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/instagram.png" alt="" />
             </div>
           </div>
               </div>
@@ -64,9 +64,9 @@ const OurExpertVets = () => {
             <h3 className="card-title text-gray-400">Groomer</h3>
             <h2 className="text-2xl font-bold text-[#393d72]">Hilixer Jon William</h2>
             <div className="card-actions">
-              <img className="w-12 cursor-pointer" src="../../assets/facebook.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/twitter.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/instagram.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/facebook.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/twitter.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/instagram.png" alt="" />
             </div>
           </div>
               </div>
@@ -84,9 +84,9 @@ const OurExpertVets = () => {
             <h3 className="card-title text-gray-400">Groomer</h3>
             <h2 className="text-2xl font-bold text-[#393d72]">Miranda H. Halim</h2>
             <div className="card-actions">
-              <img className="w-12 cursor-pointer" src="../../assets/facebook.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/twitter.png" alt="" />
-              <img className="w-12 cursor-pointer" src="../../assets/instagram.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/facebook.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/twitter.png" alt="" />
+              <img className="w-10 cursor-pointer" src="../../assets/instagram.png" alt="" />
             </div>
           </div>
         </div>
