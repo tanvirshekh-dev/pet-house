@@ -1,0 +1,32 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/1YTn2kj2/Rectangle31-1024x684.jpg"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Summer Cooling Grooming",
+    "description": "Specialized de-shedding and cooling treatments to help pets manage heat during summer months.",
+    "image": "https://i.ibb.co.com/LDsNQc8b/service-v1-2.jpg"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Organic Paw Pedicure",
+    "description": "Nail trimming followed by a soothing organic balm application to protect sensitive paw pads.",
+    "image": "https://i.ibb.co.com/1G8m2wP2/service-v1-3.jpg"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Puppy Socialization Hour",
+    "description": "A safe, supervised environment for young dogs to interact and build essential social skills.",
+    "image": "https://i.ibb.co.com/BH1KrVw7/pexels-pixabay-45170.jpg"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Dental Hygiene Assessment",
+    "description": "Professional teeth cleaning and gum health checkup to ensure your pet’s bright and healthy smile.",
+    "image": "https://i.ibb.co.com/RTxH6x60/pexels-tranmautritam-2215599.jpg"
+  }
+]

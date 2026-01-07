@@ -1,0 +1,74 @@
+[
+    {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Custom coat fitting and warm outfit options to keep your dog comfortable in the cold.",
+    "image": "https://i.ibb.co.com/9M86PHv/pet-05-5.jpg",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Deep Tissue Canine Massage",
+    "providerName": "ZenPet Wellness",
+    "providerEmail": "relax@zenpet.com",
+    "price": 60,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Therapeutic massage focusing on muscle recovery and stress relief for active or senior dogs.",
+    "image": "https://i.ibb.co.com/4zXsWrF/pet-02-2.jpg",
+    "category": "Health"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Puppy Socialization Class",
+    "providerName": "Bright Paws Academy",
+    "providerEmail": "train@brightpaws.com",
+    "price": 45,
+    "rating": 5.0,
+    "slotsAvailable": 8,
+    "description": "A guided group session for puppies to learn basic manners and interact safely with other dogs.",
+    "image": "https://i.ibb.co.com/bRCgjVNy/pet-01-1.jpg",
+    "category": "Training"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Full Grooming & Spa Package",
+    "providerName": "The Posh Poodle",
+    "providerEmail": "hello@poshpoodle.com",
+    "price": 85,
+    "rating": 4.7,
+    "slotsAvailable": 2,
+    "description": "Includes organic shampoo bath, haircut, nail trimming, and ear cleaning for all breeds.",
+    "image": "https://i.ibb.co.com/zTtL1csW/pet-03-3.jpg",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Orthopedic Bed Fitting",
+    "providerName": "ComfyCritters",
+    "providerEmail": "support@comfycritters.com",
+    "price": 15,
+    "rating": 4.6,
+    "slotsAvailable": 10,
+    "description": "Professional sizing and consultation to find the perfect memory foam bed for your pet's joints.",
+    "image": "https://i.ibb.co.com/LDT18zrz/pet-04-4.jpg",
+    "category": "Furniture"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Dental Hygiene Checkup",
+    "providerName": "Sparkle Teeth Vet",
+    "providerEmail": "care@sparklevet.com",
+    "price": 40,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "A comprehensive oral health exam including plaque assessment and breath freshening tips.",
+    "image": "https://i.ibb.co.com/HZ5CnSD/pet-06-6.jpg",
+    "category": "Health"
+  }
+]
