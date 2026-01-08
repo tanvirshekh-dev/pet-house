@@ -1,9 +1,10 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
-
+  const [nameError, setNameError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const {createUser, updateUser, setUser} = use(AuthContext);
   const navigate = useNavigate()
 
@@ -11,9 +12,21 @@ const Register = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
+    if (name.length < 5) {
+      setNameError("Must should be more then 5 character")
+      return;
+    } else {
+      setNameError("")
+    }
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
+    if (password.length < 8) {
+      setPasswordError("Password Must be 8 character");
+      return;
+    } else {
+      setPasswordError("")
+    }
     console.log(name, photo, email, password);
 
     createUser(email, password)
@@ -53,7 +66,10 @@ const Register = () => {
                   placeholder="Enter your name"
                   required
                 />
-                {/* name */}
+                {nameError && (<p className="text-red-400 text-xs font-medium pt-2">
+                  Must should be more then 5 character
+                </p>)}
+                {/* photo url */}
                 <label className="label font-semibold">Photo URL</label>
                 <input
                   name="photo"
@@ -80,11 +96,11 @@ const Register = () => {
                   placeholder="Password"
                   required
                 />
-                {/* {error && (
+                {passwordError && (
                   <p className="text-xs text-red-500 font-medium pt-2">
-                    {error}
+                    Password Must be 8 character
                   </p>
-                )} */}
+                )}
                 <button type="submit" className="btn btn-neutral mt-4">
                   Register
                 </button>
