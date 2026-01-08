@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* @plugin "daisyui"{
+  themes: light --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+} */
 
 @theme {
   --color-mint-500: white;
@@ -13,4 +20,8 @@
 
 .btn-primary{
     @apply bg-pink-500 text-white rounded-lg shadow-md px-5 py-4 border-0 hover:scale-105 hover:bg-white hover:text-pink-600 hover:border hover:border-black hover:shadow-xs font-semibold text-base
+}
+
+.btn-secondary{
+    @apply bg-[#22254a] mt-4 text-white rounded-lg shadow-md px-5 py-4 border-0 hover:scale-105 hover:bg-white hover:text-pink-600 hover:border hover:border-black hover:shadow-xs font-semibold text-base
 }

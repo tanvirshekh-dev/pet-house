@@ -2,19 +2,50 @@ import { createBrowserRouter } from "react-router";
 // import { RouterProvider } from "react-router/dom";
 import MainLayout from "../Layouts/MainLayout";
 import HomePage from "../Pages/HomePage";
+import ServicesPage from "../Pages/ServicesPage";
+import AuthLayout from "../Layouts/AuthLayout";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+import Portfolio from "../Pages/Portfolio";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <MainLayout></MainLayout>,
+        Component: MainLayout,
         children: [
             {
                 path: "/",
-                element: <HomePage></HomePage>
+                Component: HomePage,
+            },
+            {
+                path: "/services",
+                Component: ServicesPage,
+            },
+            {
+                path: "/portfolio",
+                Component: Portfolio,
             }
         ]
-    }
+    },
+    {
+        path: "/auth",
+        Component: AuthLayout,
+        children: [
+            {
+                path: "/auth/login",
+                Component: Login,
+            },
+            {
+                path: "/auth/register",
+                Component: Register,
+            }
+        ]
+    },
+    {
+    path: "/*",
+    element: <h2><span className="loading loading-dots loading-xl"></span></h2>,
+  },
 ])
 
     export default router;
