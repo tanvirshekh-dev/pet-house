@@ -17,7 +17,7 @@ const Header = () => {
       });
   };
   return (
-    <header className="bg-white px-8">
+    <header className="bg-white pr-8">
       <nav className="flex items-center justify-between">
         {/* image */}
         <div>

@@ -1,6 +1,7 @@
 import React from "react";
 import services from "../../public/petcare.json";
 import { CircleArrowRight, DollarSign, Star } from "lucide-react";
+import { Link } from "react-router";
 
 const Services = () => {
   return (
@@ -46,9 +47,9 @@ const Services = () => {
                     {item.price}
                   </div>
                 </div>
-                <button className="btn btn-primary w-42 ">
+                <Link to={`/services-details/${item.serviceId}`} className="btn btn-primary w-42 ">
                   View Details <CircleArrowRight size={20} strokeWidth={3} />
-                </button>
+                </Link>
               </div>
             </div>
           );

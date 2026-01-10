@@ -2,12 +2,14 @@ import { createBrowserRouter } from "react-router";
 // import { RouterProvider } from "react-router/dom";
 import MainLayout from "../Layouts/MainLayout";
 import HomePage from "../Pages/HomePage";
-import ServicesPage from "../Pages/ServicesPage";
+// import ServicesPage from "../Pages/ServicesPage";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Portfolio from "../Pages/Portfolio";
 import PrivetRoute from "../Provider/PrivetRoute";
+import ServiceDetails from "../Pages/ServiceDetails";
+import ServicesPage from "../Pages/ServicesPage";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/services",
-        element: (
-          <PrivetRoute>
-            <ServicesPage></ServicesPage>
-          </PrivetRoute>
-        ),
+        Component: ServicesPage,
       },
       {
         path: "/portfolio",
@@ -47,10 +45,19 @@ const router = createBrowserRouter([
     ],
   },
   {
+    path: "/services-details/:id",
+    element: (
+      <PrivetRoute>
+        <ServiceDetails></ServiceDetails>
+      </PrivetRoute>
+    ),
+    loader: () => fetch("/petcare.json"),
+  },
+  {
     path: "/*",
     element: (
-      <h2>
-        <span className="loading loading-dots loading-xl"></span>
+      <h2 className="text-black min-h-screen text-center">
+        error
       </h2>
     ),
   },

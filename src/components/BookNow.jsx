@@ -24,8 +24,8 @@ const BookNow = () => {
 
 
   return (
-    <div className="bg-[#f4f2ef]">
-      <h2 className="text-center text-3xl mt-20 font-semibold pt-16">
+    <div className="">
+      <h2 className="text-center text-3xl mt-20 font-semibold pt-8">
         Book{" "}
         <span className="text-pink-500 underline underline-offset-4 ">Now</span>{" "}
       </h2>
