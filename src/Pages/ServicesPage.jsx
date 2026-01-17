@@ -2,6 +2,7 @@ import React from 'react';
 import Services from '../components/Services';
 import TipsAndCare from '../components/TipsAndCare';
 import BookNow from '../components/BookNow';
+import FAQ from '../components/FAQ';
 
 const ServicesPage = () => {
     return (
@@ -13,7 +14,7 @@ const ServicesPage = () => {
                 <TipsAndCare></TipsAndCare>
             </section>
             <section>
-                <BookNow></BookNow>
+                <FAQ></FAQ>
             </section>
         </div>
     );

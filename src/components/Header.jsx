@@ -33,7 +33,7 @@ const Header = () => {
             <Link to={"/services"}>Services</Link>
           </li>
           <li>
-            <Link to={"/portfolio"}>Portfolio</Link>
+            <Link to={"/profile"}>My Profile</Link>
           </li>
         </ul>
 
@@ -43,7 +43,7 @@ const Header = () => {
           {user && (
             <div className="relative group flex items-center cursor-pointer">
               {/* user name */}
-              <span className="absolute top-14 right-8 scale-0 group-hover:scale-100 bg-gray-800 text-white text-sm px-3 py-1.5 rounded-md z-10">
+              <span className="absolute top-14 right-8 text-center scale-0 group-hover:scale-100 bg-gray-800 text-white text-sm px-3 py-1.5 rounded-md z-10">
                 {user?.displayName || "user name"}
               </span>
 

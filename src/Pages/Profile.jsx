@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Portfolio = () => {
+const Profile = () => {
     return (
         <div className='text-black'>
-            portfolio
+            My Profile section
         </div>
     );
 };
 
-export default Portfolio;
+export default Profile;

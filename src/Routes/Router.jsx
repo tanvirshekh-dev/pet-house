@@ -6,10 +6,10 @@ import HomePage from "../Pages/HomePage";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
-import Portfolio from "../Pages/Portfolio";
 import PrivetRoute from "../Provider/PrivetRoute";
 import ServiceDetails from "../Pages/ServiceDetails";
 import ServicesPage from "../Pages/ServicesPage";
+import Profile from "../Pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
         Component: ServicesPage,
       },
       {
-        path: "/portfolio",
-        Component: Portfolio,
+        path: "/profile",
+        Component: Profile,
       },
     ],
   },

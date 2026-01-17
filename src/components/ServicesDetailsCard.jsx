@@ -6,7 +6,7 @@ import { Link } from "react-router";
 import BookNow from "./BookNow";
 
 const ServicesDetailsCard = ({ pets }) => {
-  const { image, serviceName, category, rating, description } = pets;
+  const { image, serviceName, category, rating, description, price } = pets;
   return (
     <div className="bg-[#fbfcfe] overflow-hidden">
       <div className="w-11/12 mx-auto">
@@ -32,7 +32,7 @@ const ServicesDetailsCard = ({ pets }) => {
                 <FaStarHalfAlt className="text-yellow-400" />
               </p>
               <p className="ml-6 text-lg ">
-                From <span className="font-semibold text-[#996d39]">$50</span>{" "}
+                From <span className="font-semibold text-[#996d39]">${price}</span>{" "}
                 Per Session
               </p>
             </div>
