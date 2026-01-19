@@ -9,7 +9,7 @@ const HomePage = () => {
     return (
         <div className='text-black'>
             {/* slider section */}
-            <section>
+            <section >
                 <HeroSlider></HeroSlider>
             </section>
             {/* Services section */}

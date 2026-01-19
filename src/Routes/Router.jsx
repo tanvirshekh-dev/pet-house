@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     path: "/*",
     element: (
       <h2 className="text-black min-h-screen text-center">
-        error
+        error....
       </h2>
     ),
   },

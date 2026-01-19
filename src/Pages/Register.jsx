@@ -2,12 +2,15 @@ import React, { use, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { AiFillGoogleCircle } from "react-icons/ai";
+import { LuNotebookPen } from "react-icons/lu";
 
 const Register = () => {
   const [nameError, setNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const { createUser, updateUser, setUser } = use(AuthContext);
+  const { createUser, updateUser, setUser, signInWithGoogle } =
+    use(AuthContext);
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
@@ -27,32 +30,45 @@ const Register = () => {
 
     if (!passwordPattern.test(password)) {
       setPasswordError(
-        "Password must be 1 Uppercase, 1 Lowercase, and should be 6 character"
+        "Password must be 1 Uppercase, 1 Lowercase, and should be 6 character",
       );
       return;
     } else {
       setPasswordError("");
     }
     console.log(name, photo, email, password);
-
+    // create user
     createUser(email, password).then((result) => {
       const user = result.user;
-      updateUser({ displayName: name, photoURL: photo })
+      updateUser({ displayName: name, photoURL: photo }) // update user
         .then(() => {
           setUser({ ...user, displayName: name, photoURL: photo });
           navigate("/");
         })
         .catch((error) => {
           console.log(error);
-          setUser(user);
+          setUser(user); // set user
         });
     });
   };
 
+  // password show or close
   const handleShowPassword = (event) => {
     event.preventDefault();
-    setShowPassword(!showPassword)
-  }
+    setShowPassword(!showPassword);
+  };
+
+  // login with google
+  const handleSignInWithGoogle = () => {
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result);
+        navigate(`${location.state ? location.state : "/"}`)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
@@ -111,20 +127,50 @@ const Register = () => {
                   />
                   <button
                     onClick={handleShowPassword}
-                    className="absolute top-3 right-4 cursor-pointer">
-                    {showPassword ? <FaEyeSlash className="text-xl" /> : <FaEye className="text-xl" /> }
+                    className="absolute top-3 right-4 cursor-pointer"
+                  >
+                    {showPassword ? (
+                      <FaEyeSlash className="text-xl" />
+                    ) : (
+                      <FaEye className="text-xl" />
+                    )}
                   </button>
                 </div>
                 {passwordError && (
                   <p className="text-xs text-red-500 font-medium pt-2">
-                    Password must be 1 Uppercase, 1 Lowercase, and should be 6 character
+                    Password must be 1 Uppercase, 1 Lowercase, and should be 6
+                    character
                   </p>
                 )}
-                <button type="submit" className="btn btn-neutral mt-4">
-                  Register
+
+                
+                {/* forgot password */}
+                <div>
+                  <a
+                    // href="/forgot-password"
+                    size="sm"
+                    className="link link-hover"
+                  >
+                    Forgot password?
+                  </a>
+                </div>
+
+
+                {/* register button */}
+                <button type="submit" className="btn btn-secondary mt-4">
+                  <LuNotebookPen size={20} /> Register Now
                 </button>
+                {/* login with google */}
+                <button
+                  onClick={handleSignInWithGoogle}
+                  className="btn btn-secondary"
+                >
+                  <AiFillGoogleCircle size={24} />
+                  SignUp with Google
+                </button>
+
                 <p className="text-xs py-3 text-center">
-                  Dont’t Have An Account ?{" "}
+                  Already Have An Account ?{" "}
                   <Link
                     className="text-secondary font-semibold"
                     to={"/auth/login"}

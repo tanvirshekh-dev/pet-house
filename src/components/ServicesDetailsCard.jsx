@@ -15,29 +15,33 @@ const ServicesDetailsCard = ({ pets }) => {
             className="rounded-2xl h-[450px] object-cover w-full"
             src={image}
             alt=""
+            data-aos="flip-down"
           />
           <div className="space-y-1">
-            <h2 className="text-4xl font-bold pt-4">{serviceName}</h2>
-            <h3 className="font-medium text-lg">{category}</h3>
-            <div className="flex items-center justify-center space-x-1">
-              <p className="flex items-center space-x-1">
-                <MdOutlinePets className="text-yellow-400" />{" "}
-                <h3 className="font-semibold text-lg text-[#996d39]">
-                  {rating}{" "}
-                </h3>
-                <FaStar className="text-yellow-400 ml-2" />{" "}
-                <FaStar className="text-yellow-400" />{" "}
-                <FaStar className="text-yellow-400" />{" "}
-                <FaStar className="text-yellow-400" />
-                <FaStarHalfAlt className="text-yellow-400" />
-              </p>
-              <p className="ml-6 text-lg ">
-                From <span className="font-semibold text-[#996d39]">${price}</span>{" "}
-                Per Session
-              </p>
+            <div data-aos="zoom-in">
+              <h2 className="text-4xl font-bold pt-4">{serviceName}</h2>
+              <h3 className="font-medium text-lg">{category}</h3>
+              <div className="flex items-center justify-center space-x-1">
+                <p className="flex items-center space-x-1">
+                  <MdOutlinePets className="text-yellow-400" />{" "}
+                  <h3 className="font-semibold text-lg text-[#996d39]">
+                    {rating}{" "}
+                  </h3>
+                  <FaStar className="text-yellow-400 ml-2" />{" "}
+                  <FaStar className="text-yellow-400" />{" "}
+                  <FaStar className="text-yellow-400" />{" "}
+                  <FaStar className="text-yellow-400" />
+                  <FaStarHalfAlt className="text-yellow-400" />
+                </p>
+                <p className="ml-6 text-lg ">
+                  From{" "}
+                  <span className="font-semibold text-[#996d39]">${price}</span>{" "}
+                  Per Session
+                </p>
+              </div>
             </div>
 
-            <div className="text-start bg-[#fefefe] p-4 rounded-xl shadow-md mt-8 mb-12">
+            <div className="text-start bg-[#fefefe] p-4 rounded-xl shadow-md mt-8 mb-12" data-aos="fade-right">
               <h3 className="font-semibold text-2xl text-[#243c64] pb-1">
                 About The Services
               </h3>
@@ -45,7 +49,7 @@ const ServicesDetailsCard = ({ pets }) => {
               <p>{description}</p>
             </div>
 
-            <div className="text-start bg-[#fefefe] p-4 rounded-xl shadow-md">
+            <div className="text-start bg-[#fefefe] p-4 rounded-xl shadow-md" data-aos="fade-left">
               <h3 className="pb-1 font-semibold text-2xl text-[#243c64]">
                 What's Included
               </h3>
@@ -99,10 +103,10 @@ const ServicesDetailsCard = ({ pets }) => {
             </div>
           </div>
         </div>
-
-        <section>
-          <BookNow></BookNow>
-        </section>
+      </div>
+      
+      <div className="bg-[#f4f2ef]">
+        <BookNow></BookNow>
       </div>
     </div>
   );

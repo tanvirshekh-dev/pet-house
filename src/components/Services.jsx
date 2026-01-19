@@ -6,7 +6,11 @@ import { Link } from "react-router";
 const Services = () => {
   return (
     <div>
-      <h2 className="text-center text-3xl mt-20 font-semibold">
+      <h2
+        className="text-center text-3xl mt-20 font-semibold"
+        data-aos="zoom-out"
+        data-aos-anchor-placement="top-bottom"
+      >
         Popular{" "}
         <span className="text-pink-500 underline underline-offset-4 ">
           Winter
@@ -21,6 +25,8 @@ const Services = () => {
             <div
               key={item.serviceId}
               className="card shadow-sm hover:scale-105 hover:shadow-lg duration-300 ease-in-out transition-transform px-4 pt-4 pb-6"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-center"
             >
               <figure className="rounded-lg overflow-hidden">
                 <img src={item.image} alt="" className="w-full" />
@@ -47,7 +53,10 @@ const Services = () => {
                     {item.price}
                   </div>
                 </div>
-                <Link to={`/services-details/${item.serviceId}`} className="btn btn-primary w-42 ">
+                <Link
+                  to={`/services-details/${item.serviceId}`}
+                  className="btn btn-primary w-42 "
+                >
                   View Details <CircleArrowRight size={20} strokeWidth={3} />
                 </Link>
               </div>

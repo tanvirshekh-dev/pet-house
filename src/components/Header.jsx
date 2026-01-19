@@ -21,7 +21,7 @@ const Header = () => {
       <nav className="flex items-center justify-between">
         {/* image */}
         <div>
-          <img className="w-60" src="/logo.png" alt="" />
+          <img className="w-60" src="/logo.png" alt="logo" href={"/"} />
         </div>
 
         {/* Links */}
@@ -48,7 +48,7 @@ const Header = () => {
               </span>
 
               {/* user avatar */}
-              <div className="w-11 h-11 mt-4 rounded-full border-2 border-gray-500 overflow-hidden flex items-center">
+              <div className="w-11 h-11 mt-1 rounded-full border-2 border-gray-500 overflow-hidden flex items-center">
                  <img
                 className="w-full h-full object-cover"
                 src={user?.photoURL ? user.photoURL : userIcon}

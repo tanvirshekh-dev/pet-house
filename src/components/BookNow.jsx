@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 
 const BookNow = () => {
-  const [nameError, setNameError] = useState("")
+  const [nameError, setNameError] = useState("");
   const handleBooked = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -15,24 +15,35 @@ const BookNow = () => {
       setNameError("");
     }
     const email = form.email.value;
-    console.log(name, email)
+    console.log(name, email);
 
     // react-hot-toast
     toast.success("Successfully Booked Pets!");
     form.reset();
-  }
-
+  };
 
   return (
-    <div className="">
-      <h2 className="text-center text-3xl mt-20 font-semibold pt-8">
+    <div>
+      <h2
+        className="text-center text-3xl mt-20 font-semibold pt-8"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="top-bottom"
+      >
         Book{" "}
-        <span className="text-pink-500 underline underline-offset-4 ">Now</span>{" "}
+        <span className="text-pink-500 underline underline-offset-4 ">
+          Now
+        </span>{" "}
       </h2>
 
       <div className="hero mt-8 pb-20">
-        <div className="card w-full max-w-sm shrink-0 shadow-2xl">
-          <form onSubmit={handleBooked} className="card-body bg-white rounded-xl">
+        <div
+          className="card w-full max-w-lg shrink-0 shadow-2xl"
+          data-aos="zoom-in-up"
+        >
+          <form
+            onSubmit={handleBooked}
+            className="card-body bg-white rounded-xl"
+          >
             <fieldset className="fieldset ">
               <label className="label text-lg font-semibold">Name</label>
               <input
@@ -43,9 +54,11 @@ const BookNow = () => {
                 required
               />
               {/* name error */}
-              {nameError && (<p className="text-red-400 text-xs font-medium pt-2">
+              {nameError && (
+                <p className="text-red-400 text-xs font-medium pt-2">
                   Must should be more then 5 character
-                </p>)}
+                </p>
+              )}
               <label className="label text-lg font-semibold">Email</label>
               <input
                 name="email"
@@ -54,7 +67,7 @@ const BookNow = () => {
                 placeholder="Enter Your Email"
                 required
               />
-              <div>
+              <div className="text-left">
                 <a className="link link-hover">Forgot password?</a>
               </div>
               <button type="submit" className="btn btn-secondary">

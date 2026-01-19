@@ -5,7 +5,7 @@ import { IoLinkSharp } from "react-icons/io5";
 const Footer = () => {
   return (
     <section>
-      <footer className="footer sm:footer-horizontal bg-[#22254a] p-10">
+      <footer className="footer sm:footer-horizontal bg-[#22254a] p-10 text-white">
         <aside className="space-y-4">
           <img src="/logo-01.png" className="rounded-xl w-20" alt="" />
           <p>
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-      <div className="sm:footer-horizontal bg-[#171a39] p-6">
+      <div className="sm:footer-horizontal bg-[#171a39] p-6 text-white">
         <p className="text-center">
           all right reserved by @pethouse Ltd. Copyright &copy; 2026 | Powered
           by pethouse{" "}
