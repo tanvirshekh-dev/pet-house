@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <div>
       <h2
-        className="text-center text-3xl mt-20 font-semibold"
+        className="text-center text-2xl md:text-3xl mt-20 font-semibold"
         data-aos="zoom-out"
         data-aos-anchor-placement="top-bottom"
       >

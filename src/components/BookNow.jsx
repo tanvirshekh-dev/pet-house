@@ -23,7 +23,7 @@ const BookNow = () => {
   };
 
   return (
-    <div>
+    <div className="mx-3 md:mx-0">
       <h2
         className="text-center text-3xl mt-20 font-semibold pt-8"
         data-aos="zoom-in"

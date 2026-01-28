@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { LuNotebookPen } from "react-icons/lu";
+import toast from "react-hot-toast";
 
 const Register = () => {
   const [nameError, setNameError] = useState("");
@@ -18,7 +19,8 @@ const Register = () => {
     const form = e.target;
     const name = form.name.value;
     if (name.length < 5) {
-      setNameError("Must should be more then 5 character");
+      setNameError("Name Must should be more then 5 character");
+      toast.error("Name Must should be more then 5 character")
       return;
     } else {
       setNameError("");
@@ -31,6 +33,7 @@ const Register = () => {
     if (!passwordPattern.test(password)) {
       setPasswordError(
         "Password must be 1 Uppercase, 1 Lowercase, and should be 6 character",
+        toast.error("Password must be 1 Uppercase, 1 Lowercase, and should be 6 character")
       );
       return;
     } else {
@@ -43,6 +46,7 @@ const Register = () => {
       updateUser({ displayName: name, photoURL: photo }) // update user
         .then(() => {
           setUser({ ...user, displayName: name, photoURL: photo });
+          toast.success("Registration Successful");
           navigate("/");
         })
         .catch((error) => {

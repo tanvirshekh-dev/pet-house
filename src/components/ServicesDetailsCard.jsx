@@ -1,14 +1,16 @@
-import { MoveLeft } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { MdOutlinePets } from "react-icons/md";
-import { Link } from "react-router";
+import AOS from "aos";
 import BookNow from "./BookNow";
 
 const ServicesDetailsCard = ({ pets }) => {
+  useEffect(() => {
+      AOS.init({ duration: 1000, once: true });
+       }, []);
   const { image, serviceName, category, rating, description, price } = pets;
   return (
-    <div className="bg-[#fbfcfe] overflow-hidden">
+    <div className="bg-[#fbfcfe] overflow-hidden mt-6 md:mt-2">
       <div className="w-11/12 mx-auto">
         <div>
           <img
@@ -104,7 +106,7 @@ const ServicesDetailsCard = ({ pets }) => {
           </div>
         </div>
       </div>
-      
+
       <div className="bg-[#f4f2ef]">
         <BookNow></BookNow>
       </div>

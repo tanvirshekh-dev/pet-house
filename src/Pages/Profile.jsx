@@ -1,9 +1,11 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import loginGif from "../../assets/login.gif";
-import { User } from "lucide-react";
+import UpdateProfileModal from "../components/UpdateProfileModal";
 
 const Profile = () => {
+  const [isUpdateProfileModalOpen, setIsUpdateProfileModalOpen] =
+    useState(false);
   const { user } = use(AuthContext);
   if (!user) {
     return (
@@ -15,24 +17,38 @@ const Profile = () => {
 
   return (
     <div className="bg-[#f4f2ef]">
-      <div className="p-8 space-y-8 min-h-screen w-full">
-        <div className="flex flex-col gap-6">
-          <h2 className="text-xl font-bold text-[#001f3f]">My Profile</h2>
-          <div className="flex items-center justify-between">
+      <div className="p-2 md:p-8 space-y-8 min-h-screen w-full">
+        <div className="flex flex-col gap-6 w-full">
+          <h2 className="text-xl font-bold text-[#001f3f] pt-8 md:pt-0">My Profile</h2>
+          <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-4">
-              <img src={user.photoURL} alt="" className="border-2 border-sky-900"/>
+              <img
+                src={user.photoURL}
+                alt=""
+                className="border-2 border-sky-900"
+              />
 
               <div>
-                <h3 className="text-2xl font-bold text-slate-900">
+                <h3 className="text-2xl font-bold text-slate-900 leading-tight">
                   {user.displayName}
                 </h3>
                 <p className="text-slate-500 text-sm">{user.email}</p>
               </div>
             </div>
             {/* update profile */}
-            <div className="mt-6 flex gap-2">
-              <button className="btn btn-primary">Update Profile</button>
+            <div className="">
+              <button
+                onClick={() => setIsUpdateProfileModalOpen(true)}
+                className="btn btn-primary"
+              >
+                Update Profile
+              </button>
             </div>
+
+            <UpdateProfileModal
+              isOpen={isUpdateProfileModalOpen}
+              onClose={() => setIsUpdateProfileModalOpen(false)}
+            ></UpdateProfileModal>
           </div>
         </div>
 

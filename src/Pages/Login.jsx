@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { IoLogIn } from "react-icons/io5";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -30,6 +31,7 @@ const Login = () => {
       .catch((error) => {
         const errorCode = error.code;
         setError(errorCode);
+        toast.error("Provide valid data to login")
       });
   };
 

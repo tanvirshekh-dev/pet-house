@@ -8,7 +8,7 @@ const OurExpertVets = () => {
   return (
     <div className="bg-[#f4f2ef]">
       <h2
-        className="text-center text-3xl mt-28 pt-16 font-semibold"
+        className="text-center text-2xl md:text-3xl mt-28 pt-16 font-semibold"
         data-aos="zoom-in"
         data-aos-anchor-placement="top-bottom"
       >
