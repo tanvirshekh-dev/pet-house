@@ -25,3 +25,10 @@
 .btn-secondary{
     @apply bg-[#22254a] mt-1 text-white rounded-lg shadow-md px-5 py-4 border-0 hover:scale-105 hover:bg-white hover:text-pink-600 hover:border hover:border-black hover:shadow-xs hover:transition hover:duration-200 hover:ease-in font-semibold text-base
 }
+
+a.active {
+  color:#632EE3;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+}

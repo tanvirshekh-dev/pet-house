@@ -8,6 +8,7 @@ import PrivetRoute from "../Provider/PrivetRoute";
 import ServiceDetails from "../Pages/ServiceDetails";
 import ServicesPage from "../Pages/ServicesPage";
 import Profile from "../Pages/Profile";
+import Loading from "../components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -21,10 +22,12 @@ const router = createBrowserRouter([
       {
         path: "/services",
         Component: ServicesPage,
+        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/profile",
         Component: Profile,
+        hydrateFallbackElement: <Loading></Loading>,
       },
     ],
   },
@@ -54,8 +57,8 @@ const router = createBrowserRouter([
   {
     path: "/*",
     element: (
-      <h2 className="text-black min-h-screen text-center">
-        error....
+      <h2 className="flex items-center justify-center text-4xl font-semibold text-red-300 min-h-screen">
+        Something error....
       </h2>
     ),
   },

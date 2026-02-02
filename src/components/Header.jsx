@@ -1,6 +1,12 @@
-import { CircleArrowRight, Menu } from "lucide-react";
+import {
+  Building2,
+  CircleArrowRight,
+  CircleUserRound,
+  House,
+  Menu,
+} from "lucide-react";
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import userIcon from "../../assets/user.png";
 import toast from "react-hot-toast";
@@ -23,7 +29,11 @@ const Header = () => {
       <nav className="flex items-center justify-between">
         {/* image */}
         <div className="dropdown dropdown-start block md:hidden">
-          <div tabIndex={0} role="button" className="btn my-2 ml-6 px-3 text-black bg-white py-0 border-0">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn my-2 ml-6 px-3 text-black bg-white py-0 border-0"
+          >
             <Menu size={26} />
           </div>
           <ul
@@ -31,13 +41,40 @@ const Header = () => {
             className="dropdown-content menu bg-white text-black rounded-box z-10 w-52 p-2 shadow-sm ml-6"
           >
             <li>
-              <Link to={"/"}>Home</Link>
+              <div className="flex items-center justify-start gap-1">
+                <House size={20} />
+                <NavLink to={"/"}
+                 className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-400 font-semibold underline"
+                    : "text-gray-600"
+                }
+                >Home</NavLink>
+              </div>
             </li>
             <li>
-              <Link to={"/services"}>Services</Link>
+              <div className="flex items-center justify-start gap-1">
+                <Building2 size={20} />
+                <NavLink to={"/services"}
+                 className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-400 font-semibold underline"
+                    : "text-gray-600"
+                }
+                >Services</NavLink>
+              </div>
             </li>
             <li>
-              <Link to={"/profile"}>My Profile</Link>
+              <div className="flex items-center justify-start gap-1">
+                <CircleUserRound size={20} />
+                <NavLink to={"/profile"}
+                 className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-400 font-semibold underline"
+                    : "text-gray-600"
+                }
+                >My Profile</NavLink>
+              </div>
             </li>
           </ul>
         </div>
@@ -51,13 +88,49 @@ const Header = () => {
         {/* Links */}
         <ul className="flex gap-8 text-black font-medium">
           <li className="hidden md:block">
-            <Link to={"/"}>Home</Link>
+            <div className="flex items-center justify-center gap-1">
+              <House size={20} />
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-400 font-semibold underline"
+                    : "text-gray-600"
+                }
+              >
+                Home
+              </NavLink>
+            </div>
           </li>
           <li className="hidden md:block">
-            <Link to={"/services"}>Services</Link>
+            <div className="flex items-center justify-center gap-1">
+              <Building2 size={20} />
+              <NavLink
+                to={"/services"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-400 font-semibold underline"
+                    : "text-gray-600"
+                }
+              >
+                Services
+              </NavLink>
+            </div>
           </li>
           <li className="hidden md:block">
-            <Link to={"/profile"}>My Profile</Link>
+            <div className="flex items-center justify-center gap-1">
+              <CircleUserRound size={20} />
+              <NavLink
+                to={"/profile"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-pink-400 font-semibold underline"
+                    : "text-gray-600"
+                }
+              >
+                My Profile
+              </NavLink>
+            </div>
           </li>
         </ul>
 
