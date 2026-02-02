@@ -22,7 +22,7 @@ const TipsAndCare = () => {
           return (
             <div
               key={item.serviceId}
-              className="card shadow-sm hover:scale-105 hover:shadow-md duration-300 ease-in-out transition-transform p-4"
+              className="card shadow-sm hover:shadow-lg hover:scale-105 duration-300 transition-transform ease-in-out p-4"
                data-aos="fade-right"
             >
               <figure className="rounded-lg overflow-hidden">

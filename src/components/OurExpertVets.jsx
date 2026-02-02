@@ -24,7 +24,7 @@ const OurExpertVets = () => {
         data-aos-anchor-placement="top-center"
       >
         {/* card 01 */}
-        <div className="card shadow-md bg-white hover:scale-105 duration-300 transition-transform">
+        <div className="card shadow-md bg-white hover:shadow-lg hover:scale-105 duration-300 transition-transform">
           <figure className="w-40 mx-auto py-6">
             <img
               src={vets01}
@@ -58,7 +58,7 @@ const OurExpertVets = () => {
         </div>
 
         {/* card 02 */}
-        <div className="card shadow-md bg-white hover:scale-105 duration-300 transition-transform">
+        <div className="card shadow-md bg-white hover:shadow-lg hover:scale-105 duration-300 transition-transform">
           <figure className="w-40 mx-auto py-6">
             <img
               src={vets02}
@@ -92,7 +92,7 @@ const OurExpertVets = () => {
         </div>
 
         {/* card 03 */}
-        <div className="card shadow-md bg-white hover:scale-105 duration-300 transition-transform">
+        <div className="card shadow-md bg-white hover:shadow-lg hover:scale-105 duration-300 transition-transform">
           <figure className="w-40 mx-auto py-6">
             <img
               src={vets03}
@@ -126,7 +126,7 @@ const OurExpertVets = () => {
         </div>
 
         {/* card 04 */}
-        <div className="card shadow-md bg-white hover:scale-105 duration-300 transition-transform">
+        <div className="card shadow-md bg-white hover:shadow-lg hover:scale-105 duration-300 transition-transform">
           <figure className="w-40 mx-auto py-6">
             <img
               src={vets04}

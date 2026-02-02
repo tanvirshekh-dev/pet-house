@@ -24,7 +24,7 @@ const Services = () => {
           return (
             <div
               key={item.serviceId}
-              className="card shadow-sm hover:scale-105 hover:shadow-lg duration-300 ease-in-out transition-transform px-4 pt-4 pb-6"
+              className="card shadow-sm hover:shadow-lg duration-300 ease-in-out transition-transform hover:scale-105 px-4 pt-4 pb-6"
               data-aos="fade-up"
               data-aos-anchor-placement="top-center"
             >
