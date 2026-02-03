@@ -9,10 +9,10 @@ import toast from "react-hot-toast";
 const Login = () => {
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState("")
   const { signIn, signInWithGoogle } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  // console.log(location, navigate)
 
   // login
   const handleLogin = (event) => {
@@ -53,6 +53,11 @@ const Login = () => {
     setShowPassword(!showPassword);
   };
 
+  // reset password
+  const handleResetPassword = () => {
+    navigate("/auth/forgot-password", { state: { email } })
+  }
+
   return (
     <div>
       <div className="flex justify-center items-center min-h-screen text-black">
@@ -71,8 +76,10 @@ const Login = () => {
                 <input
                   name="email"
                   type="email"
+                  value={email}
                   className="input w-full border-base-100 border-1 bg-white mb-1"
                   placeholder="Email"
+                  onChange={(event)=> setEmail(event.target.value)}
                   required
                 />
                 {/* password */}
@@ -105,13 +112,12 @@ const Login = () => {
 
                 {/* forgot password */}
                 <div>
-                  <a
-                    // href="/forgot-password"
+                  <button onClick={handleResetPassword}
                     size="sm"
                     className="link link-hover"
                   >
                     Forgot password?
-                  </a>
+                  </button>
                 </div>
                 
                 <button type="submit" className="btn btn-secondary mt-2">

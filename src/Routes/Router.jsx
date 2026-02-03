@@ -9,6 +9,7 @@ import ServiceDetails from "../Pages/ServiceDetails";
 import ServicesPage from "../Pages/ServicesPage";
 import Profile from "../Pages/Profile";
 import Loading from "../components/Loading";
+import ForgotPassword from "../Pages/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -22,12 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/services",
         Component: ServicesPage,
-        hydrateFallbackElement: <Loading></Loading>,
       },
       {
         path: "/profile",
         Component: Profile,
-        hydrateFallbackElement: <Loading></Loading>,
       },
     ],
   },
@@ -43,6 +42,10 @@ const router = createBrowserRouter([
         path: "/auth/register",
         Component: Register,
       },
+      {
+        path: "/auth/forgot-password",
+        Component: ForgotPassword,
+      },
     ],
   },
   {
@@ -53,6 +56,7 @@ const router = createBrowserRouter([
       </PrivetRoute>
     ),
     loader: () => fetch("/petcare.json"),
+    hydrateFallbackElement: <Loading></Loading>,
   },
   {
     path: "/*",

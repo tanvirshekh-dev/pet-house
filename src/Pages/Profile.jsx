@@ -46,7 +46,11 @@ const Profile = () => {
 
   return (
     <div className="bg-[#f4f2ef]">
-      <div className="p-2 md:p-6 space-y-8 min-h-screen w-full">
+      <div
+        className="p-2 md:p-6 space-y-8 min-h-screen w-full"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+      >
         {/* Main Card */}
         <div className="bg-white w-full rounded-xl shadow-md border border-gray-100 overflow-hidden">
           {/* Header Section */}
@@ -143,8 +147,6 @@ const Profile = () => {
           </div>
         </div>
 
-
-        
         <div className="flex flex-col gap-6 w-full">
           {isUpdateProfileModalOpen && (
             <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-10">
