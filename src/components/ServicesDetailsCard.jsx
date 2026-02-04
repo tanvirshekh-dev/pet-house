@@ -57,7 +57,7 @@ const ServicesDetailsCard = ({ pets }) => {
               </h3>
               <hr className="w-10/12 text-gray-400 leading-1 pb-4" />
 
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-4 md:gap-y-6">
                 <div className="flex flex-col items-center">
                   <img
                     src="../../assets/bath.png"

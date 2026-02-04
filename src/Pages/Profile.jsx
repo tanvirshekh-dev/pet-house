@@ -150,7 +150,7 @@ const Profile = () => {
         <div className="flex flex-col gap-6 w-full">
           {isUpdateProfileModalOpen && (
             <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-10">
-              <div className="bg-white px-6 py-10 rounded-lg w-2xs md:w-lg relative text-black">
+              <div className="bg-white px-6 py-10 rounded-lg w-xs md:w-lg relative text-black">
                 <button
                   onClick={() => setIsUpdateProfileModalOpen(false)}
                   className="absolute top-5 right-6 cursor-pointer"

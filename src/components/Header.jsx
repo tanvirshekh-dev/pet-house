@@ -25,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white pr-8">
+    <header className="bg-white pr-6 py-0 md:pr-4 lg:pr-8 md:py-2 lg:py-0">
       <nav className="flex items-center justify-between">
         {/* image */}
         <div className="dropdown dropdown-start block md:hidden">
@@ -79,14 +79,15 @@ const Header = () => {
           </ul>
         </div>
 
+        {/* nav start */}
         <div className="hidden md:block">
           <Link to={"/"}>
-            <img className="w-60" src="/logo.png" alt="logo" href={"/"} />
+            <img className="w-40 lg:w-60" src="/logo.png" alt="logo" href={"/"} />
           </Link>
         </div>
 
-        {/* Links */}
-        <ul className="flex gap-8 text-black font-medium">
+        {/* nav center */}
+        <ul className="flex md:gap-4 lg:gap-8 text-black font-medium">
           <li className="hidden md:block">
             <div className="flex items-center justify-center gap-1">
               <House size={20} />
@@ -134,7 +135,7 @@ const Header = () => {
           </li>
         </ul>
 
-        {/* profile */}
+        {/* nev end */}
         <div className="flex items-center justify-center gap-4">
           {/* avatar */}
           {user && (

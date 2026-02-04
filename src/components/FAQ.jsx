@@ -15,8 +15,8 @@ const FAQ = () => {
         </span>
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto py-16 gap-6">
-        <div className="space-y-8" data-aos="fade-right">
-          <h3 className="text-4xl font-bold font-mono pt-5">Quick Answer</h3>
+        <div className="space-y-3 lg:space-y-8" data-aos="fade-right">
+          <h3 className="text-3xl lg:text-4xl font-bold font-mono pt-5">Quick Answer</h3>
           {/* Question 01 */}
           <div>
             <div
@@ -106,8 +106,8 @@ const FAQ = () => {
         </div>
 
         {/* Faq image */}
-        <div data-aos="fade-left">
-          <img src={faq} alt="" className="rounded-2xl" />
+        <div data-aos="fade-left" className="mt-4 md:mt-16 lg:mt-0">
+          <img src={faq} alt="" className="rounded-2xl w-full h-full" />
         </div>
       </div>
     </div>

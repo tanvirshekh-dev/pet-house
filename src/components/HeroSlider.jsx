@@ -18,6 +18,8 @@ const HeroSlider = () => {
         pagination={{ clickable: true }}
         navigation={true}
         className="h-full"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="top-center"
       >
         {heroSlider.map((slide) => (
           <SwiperSlide key={slide.serviceId}>

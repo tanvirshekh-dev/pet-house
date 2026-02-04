@@ -2,6 +2,7 @@ import { RotateCcwKey } from "lucide-react";
 import React, { use, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { useLocation } from "react-router";
+import toast from "react-hot-toast";
 
 const ForgotPassword = () => {
   const { resetPassword } = use(AuthContext);
@@ -15,7 +16,8 @@ const ForgotPassword = () => {
         window.location.href = "https://mail.google.com";
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error)
+        toast.error("please provide a valid email")
       });
   };
 
