@@ -25,17 +25,17 @@ const BookNow = () => {
   return (
     <div className="mx-3 md:mx-0">
       <h2
-        className="text-center text-3xl mt-20 font-semibold pt-8"
+        className="text-center text-3xl mt-28 font-semibold pt-20"
         data-aos="zoom-in"
         data-aos-anchor-placement="top-bottom"
       >
         Book{" "}
         <span className="text-pink-500 underline underline-offset-4 ">
-          Now
+          Service
         </span>{" "}
       </h2>
 
-      <div className="hero mt-8 pb-20">
+      <div className="hero mt-8 pb-32">
         <div
           className="card w-full max-w-lg shrink-0 shadow-2xl"
           data-aos="zoom-in-up"

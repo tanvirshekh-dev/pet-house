@@ -6,9 +6,9 @@ import vets04 from "../../assets/vets-04.png";
 
 const OurExpertVets = () => {
   return (
-    <div className="bg-[#f4f2ef]">
+    <div className="bg-[#f4f2ef] mt-24">
       <h2
-        className="text-center text-2xl md:text-3xl mt-28 pt-16 font-semibold"
+        className="text-center text-2xl md:text-3xl pt-20 pb-5 font-semibold"
         data-aos="zoom-in"
         data-aos-anchor-placement="top-bottom"
       >

@@ -10,16 +10,17 @@ import { CircleArrowRight } from "lucide-react";
 
 const HeroSlider = () => {
   return (
-    <section className="w-full h-[calc(100vh-80px)] mb-8">
+    <section
+      className="w-full h-[calc(100vh-80px)] mb-8 overflow-hidden"
+      data-aos="fade-up"
+    >
       <Swiper
         modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
         pagination={{ clickable: true }}
         navigation={true}
         className="h-full"
-        data-aos="zoom-in"
-        data-aos-anchor-placement="top-center"
       >
         {heroSlider.map((slide) => (
           <SwiperSlide key={slide.serviceId}>

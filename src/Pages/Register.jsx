@@ -1,5 +1,5 @@
 import React, { use, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AiFillGoogleCircle } from "react-icons/ai";
@@ -12,6 +12,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { createUser, updateUser, setUser, signInWithGoogle } =
     use(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
@@ -33,7 +34,7 @@ const Register = () => {
     if (!passwordPattern.test(password)) {
       setPasswordError(
         "Password must be 1 Uppercase, 1 Lowercase, and should be 6 character",
-        toast.error("Password must be 1 Uppercase, 1 Lowercase, and should be 6 character")
+        toast.error("Set a strong password")
       );
       return;
     } else {
@@ -46,12 +47,13 @@ const Register = () => {
       updateUser({ displayName: name, photoURL: photo }) // update user
         .then(() => {
           setUser({ ...user, displayName: name, photoURL: photo });
+          navigate(`${location.state ? location.state : "/" }`)
           toast.success("Registration Successful");
-          navigate("/");
         })
         .catch((error) => {
           console.log(error);
           setUser(user); // set user
+          toast.success("Registration succeed")
         });
     });
   };
@@ -125,7 +127,7 @@ const Register = () => {
                   <input
                     name="password"
                     type={showPassword ? "text" : "password"}
-                    className="input w-full border-base-100 border-1 bg-white mb-1"
+                    className="input w-full border-base-100 border-1 bg-white mb-6"
                     placeholder="Password"
                     required
                   />
@@ -146,19 +148,6 @@ const Register = () => {
                     character
                   </p>
                 )}
-
-                
-                {/* forgot password */}
-                <div>
-                  <a
-                    // href="/forgot-password"
-                    size="sm"
-                    className="link link-hover"
-                  >
-                    Forgot password?
-                  </a>
-                </div>
-
 
                 {/* register button */}
                 <button type="submit" className="btn btn-secondary mt-4">

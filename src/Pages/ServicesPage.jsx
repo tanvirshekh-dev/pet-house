@@ -6,8 +6,8 @@ import FAQ from '../components/FAQ';
 
 const ServicesPage = () => {
     return (
-        <div className='text-black'>
-            <section>
+        <div className='text-black overflow-hidden'>
+            <section data-aos="fade-up">
                 <Services></Services>
             </section>
             <section>

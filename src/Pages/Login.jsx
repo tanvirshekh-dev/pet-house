@@ -7,7 +7,6 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("")
   const { signIn, signInWithGoogle } = use(AuthContext);
@@ -27,11 +26,10 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         navigate(`${location.state ? location.state : "/"}`);
+        toast.success("Login Succeeded")
       })
-      .catch((error) => {
-        const errorCode = error.code;
-        setError(errorCode);
-        toast.error("Provide valid data to login")
+      .catch(() => {
+        toast.error("Please enter your valid data to login or signUp")
       });
   };
 
@@ -104,11 +102,11 @@ const Login = () => {
                   </button>
                 </div>
 
-                {error && (
+                {/* {error && (
                   <p className="text-xs text-red-500 font-medium pt-2">
                     {error}
                   </p>
-                )}
+                )} */}
 
                 {/* forgot password */}
                 <div>
@@ -145,8 +143,9 @@ const Login = () => {
             </form>
           </div>
         </div>
-      </div>{" "}
-      Login
+      </div>
+      {/* {" "}
+      Login */}
     </div>
   );
 };

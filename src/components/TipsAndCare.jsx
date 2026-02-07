@@ -16,14 +16,16 @@ const TipsAndCare = () => {
         </span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-6 my-10">
+      <div
+        data-aos="fade-right"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-6 my-10"
+      >
         {/* pet tips and care card */}
         {tips.map((item) => {
           return (
             <div
               key={item.serviceId}
               className="card shadow-sm hover:shadow-lg hover:scale-105 duration-300 transition-transform ease-in-out p-4"
-               data-aos="fade-right"
             >
               <figure className="rounded-lg overflow-hidden">
                 <img src={item.image} alt="" className="w-full h-52" />

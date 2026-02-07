@@ -13,11 +13,11 @@ const ForgotPassword = () => {
   const handleResetPassword = () => {
     resetPassword(email)
       .then(() => {
-        window.location.href = "https://mail.google.com";
+        window.open("https://mail.google.com", "_blank");
       })
       .catch((error) => {
         console.log(error)
-        toast.error("please provide a valid email")
+        toast.error("Please provide a valid email")
       });
   };
 

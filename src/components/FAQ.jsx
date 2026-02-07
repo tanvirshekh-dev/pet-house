@@ -3,7 +3,7 @@ import faq from "../../assets/faq.jpg";
 
 const FAQ = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <h2
         className="text-center text-3xl mt-24 font-semibold"
         data-aos="zoom-out"

@@ -7,7 +7,7 @@ import FAQ from '../components/FAQ';
 
 const HomePage = () => {
     return (
-        <div className='text-black'>
+        <div className='text-black overflow-x-hidden'>
             {/* slider section */}
             <section >
                 <HeroSlider></HeroSlider>

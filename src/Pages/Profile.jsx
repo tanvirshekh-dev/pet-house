@@ -47,7 +47,7 @@ const Profile = () => {
   return (
     <div className="bg-[#f4f2ef]">
       <div
-        className="p-2 md:p-6 space-y-8 min-h-screen w-full"
+        className="p-2 md:p-6 space-y-8 min-h-screen w-full overflow-hidden"
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
       >

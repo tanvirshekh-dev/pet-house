@@ -9,7 +9,7 @@ const Services = () => {
       <h2
         className="text-center text-2xl md:text-3xl mt-20 font-semibold"
         data-aos="zoom-out"
-        data-aos-anchor-placement="top-bottom"
+        // data-aos-anchor-placement="top-bottom"
       >
         Popular{" "}
         <span className="text-pink-500 underline underline-offset-4 ">
@@ -18,15 +18,16 @@ const Services = () => {
         Care Services
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-6 my-10">
+      <div
+        data-aos="fade-up"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto gap-6 my-10"
+      >
         {/* services cards  */}
         {services.map((item) => {
           return (
             <div
               key={item.serviceId}
-              className="card shadow-sm hover:shadow-lg duration-300 ease-in-out transition-transform hover:scale-105 px-4 pt-4 pb-6"
-              data-aos="fade-up"
-              data-aos-anchor-placement="top-center"
+              className="card shadow-md bg-white hover:shadow-lg hover:scale-105 duration-300 transition-transform p-4"
             >
               <figure className="rounded-lg overflow-hidden">
                 <img src={item.image} alt="" className="w-full" />
@@ -55,7 +56,7 @@ const Services = () => {
                 </div>
                 <Link
                   to={`/services-details/${item.serviceId}`}
-                  className="btn btn-primary w-42 "
+                  className="btn btn-primary w-42 mb-4"
                 >
                   View Details <CircleArrowRight size={20} strokeWidth={3} />
                 </Link>

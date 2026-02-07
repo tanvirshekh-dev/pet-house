@@ -141,7 +141,7 @@ const Header = () => {
           {user && (
             <div className="relative group flex items-center cursor-pointer">
               {/* user name */}
-              <span className="absolute top-14 right-8 text-center scale-0 group-hover:scale-100 bg-gray-800 text-white text-sm px-3 py-1.5 rounded-md z-10">
+              <span className="absolute top-14 right-8 text-center scale-0 group-hover:scale-100 bg-gray-800 text-white text-sm px-3 py-2 rounded-md z-10 w-24">
                 {user?.displayName || "user name"}
               </span>
 
